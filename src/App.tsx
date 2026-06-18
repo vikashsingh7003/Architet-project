@@ -14,7 +14,6 @@ import { Footer } from "./components/Footer";
 import { ProjectPage } from "./pages/ProjectPage";
 import { SolarPage } from "./pages/SolarPage";
 import { useScrollReveal } from "./hooks/useScrollReveal";
-import { IntroLoader } from "./components/IntroLoader";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
 
