@@ -21,6 +21,8 @@ export function QuoteSection() {
       <MouseEffectCard 
         className="absolute inset-0 w-full h-full z-10 !max-w-none !border-none !rounded-none !bg-transparent"
         contentClassName="!h-full w-full"
+        dotSize={48}
+        dotSpacing={96}
         topText="APA Via"
         topSubtext="Design without limits"
         title="Infinite Possibilities"
