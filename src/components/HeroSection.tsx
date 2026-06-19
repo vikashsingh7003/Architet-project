@@ -11,7 +11,7 @@ export function HeroSection() {
           preload="auto"
         >
           <source
-            src="https://videos.pexels.com/video-files/3121459/3121459-uhd_2560_1440_24fps.mp4"
+            src="/Task-108802268-1-1.mp4"
             type="video/mp4"
           />
         </video>
