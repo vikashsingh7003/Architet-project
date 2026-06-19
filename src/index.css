@@ -1018,15 +1018,21 @@ address {
     padding: 16px;
   }
 
+  .hero-bg-img {
+    object-fit: cover;
+    background-color: var(--color-black);
+  }
+
   .hero-section {
-    min-height: 70vh;
-    padding: 60px 0 100px;
-    margin-top: -12%;
+    min-height: auto;
+    aspect-ratio: 3640 / 2048;
+    padding: 0;
+    margin-top: 0;
   }
 
   .about-section {
     padding: 60px 0 50px;
-    margin-top: -12%;
+    margin-top: -5%;
     border-radius: 40px 40px 0 0;
     min-height: auto;
   }
