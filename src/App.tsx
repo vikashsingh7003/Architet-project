@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { Route, Switch } from "wouter";
-import { Agentation } from "agentation";
 import { LanguageProvider } from "./context/LanguageContext";
 import { Header } from "./components/Header";
 import { HeroSection } from "./components/HeroSection";
@@ -16,6 +15,7 @@ import { SolarPage } from "./pages/SolarPage";
 import { useScrollReveal } from "./hooks/useScrollReveal";
 import Lenis from "lenis";
 import "lenis/dist/lenis.css";
+import { Agentation } from "agentation";
 
 function SmoothScroller() {
   useEffect(() => {
@@ -110,7 +110,7 @@ export default function App() {
         </Route>
         <Route component={HomePage} />
       </Switch>
-      {(typeof process !== 'undefined' ? process.env.NODE_ENV === 'development' : import.meta.env.DEV) && <Agentation />}
+      {import.meta.env.DEV && <Agentation />}
     </LanguageProvider>
   );
 }

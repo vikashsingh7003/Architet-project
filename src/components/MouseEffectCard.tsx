@@ -312,37 +312,28 @@ export default function MouseEffectCard({
 
         {topText && (
           <div className="absolute top-6 left-6 z-10">
-            <div className="relative">
-              <div className="absolute inset-0 rounded-lg bg-white/60 blur-lg dark:bg-zinc-950/60" />
-              <div className="relative flex flex-col gap-1">
-                <p className="font-bold text-sm text-zinc-900 dark:text-white">
-                  {topText}
+            <div className="relative flex flex-col gap-1">
+              <p className="font-bold text-sm text-white">
+                {topText}
+              </p>
+              {topSubtext && (
+                <p className="font-medium text-xs text-white/70">
+                  {topSubtext}
                 </p>
-                {topSubtext && (
-                  <p className="font-medium text-xs text-zinc-600 opacity-70 dark:text-zinc-400">
-                    {topSubtext}
-                  </p>
-                )}
-              </div>
+              )}
             </div>
           </div>
         )}
 
         <div className="relative z-10 flex h-full flex-col items-center justify-center px-2">
           <div className="flex flex-col items-center gap-6">
-            <div className="relative">
-              <div className="absolute inset-0 rounded-full bg-white/80 blur-2xl dark:bg-zinc-950/80" />
-              <h2 className="relative text-center font-bold text-3xl text-zinc-900 tracking-tight dark:text-white">
-                {title}
-              </h2>
-            </div>
+            <h2 className="relative text-center font-bold text-3xl text-white tracking-tight">
+              {title}
+            </h2>
             {(subtitle || children) && (
-              <div className="relative">
-                <div className="absolute inset-0 rounded-lg bg-white/60 blur-xl dark:bg-zinc-950/60" />
-                <p className="relative max-w-sm text-center font-medium text-base text-zinc-700 leading-relaxed dark:text-zinc-300">
-                  {children || subtitle}
-                </p>
-              </div>
+              <p className="relative max-w-sm text-center font-medium text-base text-white/80 leading-relaxed">
+                {children || subtitle}
+              </p>
             )}
             <div className="mt-2 flex items-center gap-3">
               <Button asChild className="rounded-full shadow-lg" size="lg">
@@ -382,12 +373,9 @@ export default function MouseEffectCard({
 
         {footerText && (
           <div className="absolute right-0 bottom-6 left-0 z-10 flex justify-center">
-            <div className="relative">
-              <div className="absolute inset-0 rounded-full bg-white/60 blur-lg dark:bg-zinc-950/60" />
-              <p className="relative px-4 py-1 font-medium text-xs text-zinc-600 dark:text-zinc-400">
-                {footerText}
-              </p>
-            </div>
+            <p className="relative px-4 py-1 font-medium text-xs text-white/70">
+              {footerText}
+            </p>
           </div>
         )}
       </CardContent>

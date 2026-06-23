@@ -617,9 +617,23 @@ address {
    ===================================================== */
 .projects-section {
   position: relative;
-  background-color: var(--color-section-light);
+  background-image: url('/projects_bg.png');
+  background-size: cover;
+  background-position: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   z-index: 70;
   padding-bottom: 50px;
+  overflow: hidden;
+}
+
+.projects-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.45);
+  z-index: 0;
+  pointer-events: none;
 }
 
 .projects-header-row {
@@ -643,7 +657,7 @@ address {
   font-size: 3.5rem;
   font-weight: 600;
   line-height: 1em;
-  color: var(--color-dark);
+  color: var(--color-white);
 }
 
 .projects-see-more-btn {
@@ -653,14 +667,15 @@ address {
   font-family: 'Exo 2', sans-serif;
   font-size: 1rem;
   font-weight: 500;
-  color: var(--color-dark);
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   margin-top: 20px;
-  transition: opacity var(--transition-fast);
+  transition: opacity var(--transition-fast), color var(--transition-fast);
 }
 
 .projects-see-more-btn:hover {
-  opacity: 0.7;
+  opacity: 1;
+  color: var(--color-white);
 }
 
 .projects-header-right {
@@ -670,7 +685,7 @@ address {
 .projects-description {
   font-size: 1.125rem;
   line-height: 1.6em;
-  color: var(--color-dark);
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .projects-grid {
@@ -1720,7 +1735,7 @@ select.floating-input:focus~.floating-label {
 .solar-hero-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=1920&q=80&auto=format&fit=crop');
+  background-image: url('/assets/images/solar_hero_bg.png');
   background-size: cover;
   background-position: center 40%;
   z-index: 0;
@@ -2253,7 +2268,7 @@ select.floating-input:focus~.floating-label {
 .stats-bg {
   position: absolute;
   inset: 0;
-  background-image: url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1920&q=75&auto=format&fit=crop');
+  background-image: url('/assets/images/stats_bg.png');
   background-size: cover;
   background-position: center 60%;
   background-attachment: fixed;

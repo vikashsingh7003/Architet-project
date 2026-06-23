@@ -29,7 +29,7 @@ export function AboutSection() {
           </div>
         </div>
         <div className="about-image-col reveal reveal-delay-2">
-          <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&q=80&auto=format&fit=crop"
+          <img src="/assets/images/about_img.png"
             alt="Modern architectural building" width={800} height={776} loading="lazy" />
         </div>
       </div>

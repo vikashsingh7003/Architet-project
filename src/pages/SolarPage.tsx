@@ -8,7 +8,7 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 const SOLAR_PROJECTS = [
   {
     id: "s1",
-    bgUrl: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=900&q=80&auto=format&fit=crop",
+    bgUrl: "/assets/images/solar_proj1.png",
     alt: "Solar rooftop residence",
     tagEn: "Residential",
     tagPl: "Mieszkalny",
@@ -19,7 +19,7 @@ const SOLAR_PROJECTS = [
   },
   {
     id: "s2",
-    bgUrl: "https://images.unsplash.com/photo-1548348539-dce7b19ede37?w=900&q=80&auto=format&fit=crop",
+    bgUrl: "/assets/images/solar_proj2.png",
     alt: "Commercial solar facade",
     tagEn: "Commercial",
     tagPl: "Komercyjny",
@@ -30,7 +30,7 @@ const SOLAR_PROJECTS = [
   },
   {
     id: "s3",
-    bgUrl: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80&auto=format&fit=crop",
+    bgUrl: "/assets/images/solar_proj3.png",
     alt: "Public solar canopy",
     tagEn: "Public",
     tagPl: "Publiczny",
@@ -125,7 +125,7 @@ export function SolarPage() {
           </div>
           <div className="solar-intro-image reveal reveal-delay-1">
             <img
-              src="https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?w=800&q=80&auto=format&fit=crop"
+              src="/assets/images/solar_intro.png"
               alt="Solar panel detail"
               loading="lazy"
             />
