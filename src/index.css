@@ -1562,9 +1562,6 @@ select.floating-input:focus~.floating-label {
   line-height: 1.75em;
   color: var(--color-dark);
 }
-
-.project-page-specs {}
-
 .specs-title {
   font-family: var(--font-heading);
   font-size: 1.2rem;
