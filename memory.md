@@ -10,7 +10,7 @@ The business problem solved is providing a high-end, premium online presence for
 - **Frontend Framework**: React (via Vite)
 - **Routing**: Wouter
 - **Styling**: Tailwind CSS
-- **Animations**: GSAP, Framer Motion
+- **Animations**: GSAP (with ScrollTrigger for cinematic reveals and parallax), Framer Motion
 - **Smooth Scrolling**: Lenis
 - **Backend/Database**: None detected (purely static/frontend).
 
@@ -30,8 +30,8 @@ See `routes.md`.
 - `src/components/`: Reusable UI components (HeroSection, AboutSection, FeaturedProjects, ProjectsGrid, etc.).
 - `src/pages/`: Full page views (ProjectPage, SolarPage).
 - `src/context/`: React context providers (LanguageContext).
-- `src/data/`: Hardcoded project data (mock backend).
-- `src/hooks/`: Custom React hooks (useScrollReveal).
+- **src/data/**: Hardcoded project data (mock backend).
+- **src/hooks/**: Custom React hooks (useScrollReveal with GSAP ScrollTrigger).
 
 ## Backend Architecture
 N/A (No backend).

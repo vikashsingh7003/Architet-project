@@ -1,6 +1,5 @@
 import { useLang } from "../context/LanguageContext";
 import { Button } from "./ui/button";
-import { TextHoverEffect } from "./ui/text-hover-effect";
 
 const scrollTo = (id: string) => {
   const el = document.getElementById(id);
@@ -32,8 +31,10 @@ export function QuoteSection() {
       {/* Main Content */}
       <div className="relative z-10 flex flex-col items-center justify-center px-4 py-20 w-full max-w-4xl mx-auto">
         <div className="flex flex-col items-center gap-6">
-          <div className="h-[12rem] md:h-[16rem] w-full flex items-center justify-center">
-            <TextHoverEffect text="INFINITE POSSIBILITIES" />
+          <div className="w-full flex items-center justify-center py-8">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-bold font-[helvetica] text-white tracking-widest text-center uppercase">
+              INFINITE POSSIBILITIES
+            </h2>
           </div>
           
           <p className="max-w-2xl text-center font-medium text-lg text-white/80 leading-relaxed whitespace-pre-wrap">

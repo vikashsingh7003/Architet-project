@@ -8,6 +8,11 @@ export const t = {
       solar: "SOLAR",
       contact: "CONTACT",
     },
+    hero: {
+      title: "Architecture that inspires",
+      subtitle: "Designing tomorrow's spaces with timeless elegance.",
+      btn: "VIEW OUR WORK",
+    },
     about: {
       label: "ABOUT US",
       heading: "APA-Via — A Studio with Years of Experience and International Awards",
@@ -117,6 +122,11 @@ export const t = {
       about: "O NAS",
       solar: "SOLAR",
       contact: "KONTAKT",
+    },
+    hero: {
+      title: "Architektura, która inspiruje",
+      subtitle: "Projektujemy przestrzenie jutra z ponadczasową elegancją.",
+      btn: "ZOBACZ NASZE PRACE",
     },
     about: {
       label: "O NAS",

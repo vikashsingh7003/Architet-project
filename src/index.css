@@ -99,7 +99,7 @@ address {
   border-radius: var(--radius-btn);
   border: none;
   cursor: pointer;
-  transition: background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast);
+  transition: background-color var(--transition-fast), color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
   text-decoration: none;
   white-space: nowrap;
   letter-spacing: 0.02em;
@@ -131,6 +131,8 @@ address {
 .btn-primary:hover {
   background-color: var(--color-white);
   color: var(--color-black);
+  transform: scale(1.02);
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 5px 15px 0px;
 }
 
 .btn-primary-lg {
@@ -143,6 +145,8 @@ address {
 .btn-primary-lg:hover {
   background-color: var(--color-black);
   color: var(--color-white);
+  transform: scale(1.02);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px 0px;
 }
 
 .btn-outline {
@@ -154,6 +158,7 @@ address {
 
 .btn-outline:hover {
   background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.02);
 }
 
 .btn-cta {
@@ -424,8 +429,33 @@ address {
   width: 100%;
   max-width: 1140px;
   padding: 0 7%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(3rem, 6vw, 5.5rem);
+  font-weight: 500;
+  line-height: 1.05em;
+  color: var(--color-white);
+  max-width: 800px;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(1.125rem, 2vw, 1.35rem);
+  line-height: 1.6em;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 600px;
+  font-weight: 300;
+}
+
+.hero-btns {
+  margin-top: 16px;
+}
 /* =====================================================
    ABOUT SECTION
    ===================================================== */
@@ -546,10 +576,10 @@ address {
 
 .featured-project-bg {
   position: absolute;
-  inset: 0;
+  inset: -15% 0 -15% 0;
+  height: 130%;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
 }
 
 .featured-project-overlay {

@@ -1,7 +1,12 @@
+import { useEffect, useRef } from "react";
 import { useLocation } from "wouter";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowIcon } from "./ArrowIcon";
 import { useLang } from "../context/LanguageContext";
 import { projects } from "../data/projects";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const scrollTo = (id: string) => {
   const el = document.getElementById(id);
@@ -17,9 +22,38 @@ export function FeaturedProjects() {
   const [, navigate] = useLocation();
   const { lang, tr } = useLang();
   const p = tr.projects;
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!containerRef.current) return;
+    
+    const projects = gsap.utils.toArray<HTMLElement>(".featured-project");
+    projects.forEach((proj) => {
+      const bg = proj.querySelector(".featured-project-bg");
+      if (bg) {
+        gsap.fromTo(bg,
+          { yPercent: -15 },
+          {
+            yPercent: 15,
+            ease: "none",
+            scrollTrigger: {
+              trigger: proj,
+              start: "top bottom",
+              end: "bottom top",
+              scrub: true,
+            }
+          }
+        );
+      }
+    });
+
+    return () => {
+      ScrollTrigger.getAll().forEach(t => t.kill());
+    };
+  }, []);
 
   return (
-    <div id="projects">
+    <div id="projects" ref={containerRef}>
       {projects.map((project, i) => {
         const title = lang === "pl" ? project.titlePl : project.titleEn;
         const shortText = lang === "pl" ? project.shortTextPl : project.shortTextEn;

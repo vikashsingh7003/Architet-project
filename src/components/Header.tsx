@@ -1,5 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import { useLocation } from "wouter";
+import { ArrowLeft } from "lucide-react";
 import { ArrowIcon } from "./ArrowIcon";
 import { useLang } from "../context/LanguageContext";
 
@@ -40,6 +41,7 @@ export function Header() {
 
   const scrollToContact = () => scrollTo("contact");
   const goHome = () => { navigate("/"); window.scrollTo({ top: 0, behavior: "smooth" }); };
+  const goBack = () => { window.history.back(); };
   const goSolar = (e: React.MouseEvent) => {
     e.preventDefault();
     navigate("/solar");
@@ -51,7 +53,31 @@ export function Header() {
   return (
     <header className={`site-header${scrolled ? " site-header--glass" : ""}`} id="site-header">
       <nav className={`nav-desktop${scrolled ? " nav-desktop--glass" : ""}`} aria-label="Main navigation">
-        <div className="nav-logo">
+        <div className="nav-logo" style={{ display: 'flex', alignItems: 'center' }}>
+          {location !== "/" && (
+            <button 
+              onClick={goBack} 
+              aria-label="Go back" 
+              style={{ 
+                marginRight: '20px', 
+                background: 'rgba(255, 255, 255, 0.1)', 
+                border: '1px solid rgba(255, 255, 255, 0.2)', 
+                color: 'var(--color-white)', 
+                cursor: 'pointer',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '40px',
+                height: '40px',
+                borderRadius: '50%',
+                transition: 'all 0.2s ease'
+              }}
+              onMouseEnter={(e) => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.2)'; e.currentTarget.style.transform = 'scale(1.05)'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.background = 'rgba(255, 255, 255, 0.1)'; e.currentTarget.style.transform = 'scale(1)'; }}
+            >
+              <ArrowLeft size={20} />
+            </button>
+          )}
           <a href="#" onClick={(e) => { e.preventDefault(); goHome(); }} aria-label="APA Via Home">
             <img src="/assets/images/logo.png" alt="APA Via"
               style={{ height: "70px", width: "auto", transform: "scale(1.7)", transformOrigin: "left center" }} />
